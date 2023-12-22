@@ -69,7 +69,9 @@
   <entry>
     <title>tricks</title>
     <url>/posts/tricks/</url>
-    <content><![CDATA[<ol>
+    <content><![CDATA[<p>自己用的，不完整，随时补充。</p>
+<span id="more"></span>
+<ol>
 <li>随机化 Hash (XOR Hash)</li>
 </ol>
 <ul>
