@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/avatar.jpg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/avtar.jpg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zlx.pw","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="新一轮的模板整理采用分模块的方式，同时只保留重要内容，删去简短能够在赛场直接写出来并且不是每个题都要用的东西。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算几何模板整理">
+<meta property="og:url" content="https://zlx.pw/posts/geometry/index.html">
+<meta property="og:site_name" content="zlxFTH&#39;s Blog">
+<meta property="og:description" content="新一轮的模板整理采用分模块的方式，同时只保留重要内容，删去简短能够在赛场直接写出来并且不是每个题都要用的东西。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-21T06:22:42.000Z">
+<meta property="article:modified_time" content="2024-01-07T11:04:45.148Z">
+<meta property="article:author" content="zlxFTH">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://zlx.pw/posts/geometry/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>计算几何模板整理 | zlxFTH's Blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">zlxFTH's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zlx.pw/posts/geometry/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="zlxFTH">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="zlxFTH's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算几何模板整理
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-11-21 14:22:42" itemprop="dateCreated datePublished" datetime="2023-11-21T14:22:42+08:00">2023-11-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-01-07 19:04:45" itemprop="dateModified" datetime="2024-01-07T19:04:45+08:00">2024-01-07</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Notes/" itemprop="url" rel="index"><span itemprop="name">Notes</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>新一轮的模板整理采用分模块的方式，同时只保留重要内容，删去简短能够在赛场直接写出来并且不是每个题都要用的东西。</p>
+<span id="more"></span>
+<h2 id="点和向量">点和向量</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">double</span> PI = <span class="built_in">acos</span>(<span class="number">-1</span>);</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> eps = <span class="number">1e-8</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">double</span> Infdb = <span class="number">1e18</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="type">int</span> <span class="title">dcmp</span><span class="params">(<span class="type">double</span> x)</span> </span>&#123;<span class="keyword">return</span> x &lt; -eps ? <span class="number">-1</span> : x &gt; eps;&#125;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Point</span> &#123;</span><br><span class="line">  <span class="type">double</span> x, y;</span><br><span class="line">  <span class="built_in">Point</span>(<span class="type">double</span> x = <span class="number">0</span>, <span class="type">double</span> y = <span class="number">0</span>) : <span class="built_in">x</span>(x), <span class="built_in">y</span>(y) &#123;&#125;</span><br><span class="line">  Point <span class="keyword">operator</span>+(Point b) &#123;<span class="keyword">return</span> <span class="built_in">Point</span>(x + b.x, y + b.y);&#125;</span><br><span class="line">  Point <span class="keyword">operator</span>-(Point b) &#123;<span class="keyword">return</span> <span class="built_in">Point</span>(x - b.x, y - b.y);&#125;</span><br><span class="line">  Point <span class="keyword">operator</span>*(<span class="type">double</span> p) &#123;<span class="keyword">return</span> <span class="built_in">Point</span>(x * p, y * p);&#125;</span><br><span class="line">  <span class="type">double</span> <span class="keyword">operator</span>*(Point b) &#123;<span class="keyword">return</span> x * b.x + y * b.y;&#125;</span><br><span class="line">  <span class="type">double</span> <span class="keyword">operator</span>^(Point b) &#123;<span class="keyword">return</span> x * b.y - y * b.x;&#125;</span><br><span class="line">  <span class="function"><span class="type">double</span> <span class="title">len</span><span class="params">()</span> </span>&#123;<span class="keyword">return</span> <span class="built_in">sqrt</span>(x * x + y * y);&#125;</span><br><span class="line">  <span class="type">bool</span> <span class="keyword">operator</span>&lt;(Point b) <span class="type">const</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> !<span class="built_in">dcmp</span>(x - b.x) ? <span class="built_in">dcmp</span>(y - b.y) &lt; <span class="number">0</span> : <span class="built_in">dcmp</span>(x - b.x) &lt; <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="type">bool</span> <span class="keyword">operator</span>==(Point b) &#123;<span class="keyword">return</span> !<span class="built_in">dcmp</span>(x - b.x) &amp;&amp; !<span class="built_in">dcmp</span>(y - b.y);&#125;</span><br><span class="line">  <span class="function">Point <span class="title">rot</span><span class="params">(<span class="type">double</span> p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Point</span>(x * <span class="built_in">cos</span>(p) - y * <span class="built_in">sin</span>(p), x * <span class="built_in">sin</span>(p) + y * <span class="built_in">cos</span>(p));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">ang</span><span class="params">(Point a, Point b)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">acos</span>((a * b) / a.<span class="built_in">len</span>() / b.<span class="built_in">len</span>());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="直线相关">直线相关</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">bool</span> <span class="title">onSeg</span><span class="params">(Point p, Point a, Point b)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> !<span class="built_in">dcmp</span>((p - a) ^ (p - b)) &amp;&amp; <span class="built_in">dcmp</span>((p - a) * (p - b)) &lt;= <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">onLine</span><span class="params">(Point p, Point a, Point b)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> !<span class="built_in">dcmp</span>((p - a) ^ (p - b));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">toLine</span><span class="params">(Point p, Point a, Point b)</span> </span>&#123;</span><br><span class="line">  Point v = b - a;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">fabs</span>(v ^ (p - a)) / v.<span class="built_in">len</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Point <span class="title">foot</span><span class="params">(Point p, Point a, Point b)</span> </span>&#123;</span><br><span class="line">  Point v = b - a;</span><br><span class="line">  <span class="keyword">return</span> a + v * ((v * (p - a)) / (v * v));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">side</span><span class="params">(Point p, Point a, Point b)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">dcmp</span>((p - a) ^ (b - a));</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">double</span> <span class="title">toSeg</span><span class="params">(Point p, Point a, Point b)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (a == b) <span class="keyword">return</span> (p - a).<span class="built_in">len</span>();</span><br><span class="line">  Point x = p - a, y = p - b, z = b - a;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">dcmp</span>(x * z) &lt; <span class="number">0</span>) <span class="keyword">return</span> x.<span class="built_in">len</span>();</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">dcmp</span>(y * z) &gt; <span class="number">0</span>) <span class="keyword">return</span> y.<span class="built_in">len</span>();</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">toLine</span>(p, a, b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">Point <span class="title">inter</span><span class="params">(Point a, Point b, Point c, Point d)</span> </span>&#123;</span><br><span class="line">  Point x = b - a, y = d - c, z = a - c;</span><br><span class="line">  <span class="keyword">return</span> a + x * ((y ^ z) / (x ^ y));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Line</span> &#123;</span><br><span class="line">  Point a, b;</span><br><span class="line">  <span class="type">double</span> k;</span><br><span class="line">  <span class="built_in">Line</span>() &#123;&#125;</span><br><span class="line">  <span class="built_in">Line</span>(Point a, Point b) : <span class="built_in">a</span>(a), <span class="built_in">b</span>(b) &#123;</span><br><span class="line">    k = <span class="built_in">atan2</span>(b.y - a.y, b.x - a.x);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="type">bool</span> <span class="keyword">operator</span>&lt;(Line rhs) <span class="type">const</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">dcmp</span>(k - rhs.k)) <span class="keyword">return</span> <span class="built_in">dcmp</span>(k - rhs.k) &lt; <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">side</span>(rhs.a, a, b) == <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function">Point <span class="title">inter</span><span class="params">(Line p, Line q)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">inter</span>(p.a, p.b, q.a, q.b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="多边形相关">多边形相关</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> vector&lt;Point&gt; vPoint;</span><br><span class="line"><span class="function">vPoint <span class="title">convexHull</span><span class="params">(vPoint A)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> n = A.<span class="built_in">size</span>(), m = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span> A;</span><br><span class="line">  <span class="built_in">sort</span>(A.<span class="built_in">begin</span>(), A.<span class="built_in">end</span>());</span><br><span class="line">  <span class="function">vPoint <span class="title">B</span><span class="params">(<span class="number">2</span> * n)</span></span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; B[m++] = A[i++])</span><br><span class="line">    <span class="keyword">while</span> (m &gt; <span class="number">1</span> &amp;&amp; <span class="built_in">dcmp</span>((A[i] - B[m - <span class="number">2</span>]) ^ (B[m - <span class="number">1</span>] - B[m - <span class="number">2</span>])) &gt;= <span class="number">0</span>) --m;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = n - <span class="number">2</span>, t = m; ~i; B[m++] = A[i--])</span><br><span class="line">    <span class="keyword">while</span> (m &gt; t &amp;&amp; <span class="built_in">dcmp</span>((A[i] - B[m - <span class="number">2</span>]) ^ (B[m - <span class="number">1</span>] - B[m - <span class="number">2</span>])) &gt;= <span class="number">0</span>) --m;</span><br><span class="line">  B.<span class="built_in">resize</span>(m - <span class="number">1</span>);</span><br><span class="line">  <span class="keyword">return</span> B;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">inPoly</span><span class="params">(vPoint A, Point p)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> n = A.<span class="built_in">size</span>(), wn = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    Point a = A[i], b = A[(i + <span class="number">1</span>) % n];</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">onSeg</span>(p, a, b)) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">    <span class="type">int</span> k = <span class="built_in">side</span>(b, a, p);</span><br><span class="line">    <span class="type">int</span> d1 = <span class="built_in">dcmp</span>(a.y - p.y), d2 = <span class="built_in">dcmp</span>(b.y - p.y);</span><br><span class="line">    <span class="keyword">if</span> (k &gt; <span class="number">0</span> &amp;&amp; d1 &lt;= <span class="number">0</span> &amp;&amp; d2 &gt; <span class="number">0</span>) wn++;</span><br><span class="line">    <span class="keyword">if</span> (k &lt; <span class="number">0</span> &amp;&amp; d2 &lt;= <span class="number">0</span> &amp;&amp; d1 &gt; <span class="number">0</span>) wn--;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> wn != <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">inConvexPoly</span><span class="params">(<span class="type">const</span> vPoint &amp;A, Point p)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> n = A.<span class="built_in">size</span>();</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">side</span>(p, A[<span class="number">0</span>], A[<span class="number">1</span>]) == <span class="number">1</span> || <span class="built_in">side</span>(A[n - <span class="number">1</span>], A[<span class="number">0</span>], p) == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">onSeg</span>(p, A[<span class="number">0</span>], A[<span class="number">1</span>]) || <span class="built_in">onSeg</span>(p, A[<span class="number">0</span>], A[n - <span class="number">1</span>])) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  <span class="type">int</span> l = <span class="number">1</span>, r = n - <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">while</span> (l &lt; r) &#123;</span><br><span class="line">    <span class="type">int</span> mid = (l + r + <span class="number">1</span>) &gt;&gt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">side</span>(A[mid], A[<span class="number">0</span>], p) == <span class="number">1</span>) l = mid;</span><br><span class="line">    <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">side</span>(p, A[l], A[l + <span class="number">1</span>]) == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">onSeg</span>(p, A[l], A[l + <span class="number">1</span>])) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="圆相关">圆相关</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Circle</span> &#123;</span><br><span class="line">  Point p;</span><br><span class="line">  <span class="type">double</span> r;</span><br><span class="line">  <span class="built_in">Circle</span>(Point p, <span class="type">double</span> r = <span class="number">0</span>) : <span class="built_in">p</span>(p), <span class="built_in">r</span>(r) &#123;&#125;</span><br><span class="line">  <span class="function">Point <span class="title">get</span><span class="params">(<span class="type">double</span> ang)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">Point</span>(p.x + <span class="built_in">cos</span>(ang) * r, p.y + <span class="built_in">sin</span>(ang) * r);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">side</span><span class="params">(Circle c, Point a)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="built_in">dcmp</span>((a - c.p).<span class="built_in">len</span>() - c.r);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">side</span><span class="params">(Circle a, Circle b)</span> </span>&#123;</span><br><span class="line">  <span class="type">double</span> d = (b.p - a.p).<span class="built_in">len</span>();</span><br><span class="line">  <span class="type">int</span> f = <span class="built_in">dcmp</span>(d - (a.r - b.r));</span><br><span class="line">  <span class="keyword">if</span> (f == <span class="number">0</span> &amp;&amp; !<span class="built_in">dcmp</span>(a.r - b.r)) f = <span class="number">-2</span>;</span><br><span class="line">  <span class="keyword">if</span> (f &gt; <span class="number">0</span>) f = <span class="number">2</span> + <span class="built_in">dcmp</span>(d - (a.r + b.r));</span><br><span class="line">  <span class="keyword">return</span> f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">inter</span><span class="params">(Circle c, Point a, Point b, vPoint &amp;res)</span> </span>&#123;</span><br><span class="line">  <span class="type">double</span> d = <span class="built_in">toLine</span>(c.p, a, b);</span><br><span class="line">  <span class="type">int</span> f = <span class="built_in">dcmp</span>(d - c.r);</span><br><span class="line">  <span class="keyword">if</span> (f &lt; <span class="number">-1</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">else</span> <span class="keyword">if</span> (!f) &#123;</span><br><span class="line">    res.<span class="built_in">push_back</span>(<span class="built_in">foot</span>(c.p, a, b));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">  &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    Point p = <span class="built_in">foot</span>(c.p, a, b), v = b - a;</span><br><span class="line">    <span class="type">double</span> l = <span class="built_in">sqrt</span>(c.r * c.r - d * d);</span><br><span class="line">    res.<span class="built_in">push_back</span>(p + v * (l / v.<span class="built_in">len</span>()));</span><br><span class="line">    res.<span class="built_in">push_back</span>(p - v * (l / v.<span class="built_in">len</span>()));</span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">inter</span><span class="params">(Circle a, Circle b, vPoint &amp;res)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (a.r &lt; b.r) <span class="built_in">swap</span>(a, b);</span><br><span class="line">  <span class="type">int</span> k = <span class="built_in">side</span>(a, b);</span><br><span class="line">  Point v = b.p - a.p;</span><br><span class="line">  <span class="type">double</span> d = v.<span class="built_in">len</span>(), base = <span class="built_in">atan2</span>(v.y, v.x);</span><br><span class="line">  <span class="keyword">if</span> (k == <span class="number">0</span> || k == <span class="number">2</span>) res.<span class="built_in">push_back</span>(a.<span class="built_in">get</span>(base));</span><br><span class="line">  <span class="keyword">if</span> (k == <span class="number">1</span>) &#123;</span><br><span class="line">    <span class="type">double</span> ag = <span class="built_in">acos</span>((a.r * a.r + d * d - b.r * b.r) / (a.r * d));</span><br><span class="line">    res.<span class="built_in">push_back</span>(a.<span class="built_in">get</span>(base + ag));</span><br><span class="line">    res.<span class="built_in">push_back</span>(a.<span class="built_in">get</span>(base - ag));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="半平面交">半平面交</h2>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">vPoint <span class="title">halfCut</span><span class="params">(vector&lt;Line&gt; L)</span> </span>&#123;</span><br><span class="line">  <span class="type">int</span> n = L.<span class="built_in">size</span>(), m = <span class="number">0</span>;</span><br><span class="line">  <span class="built_in">sort</span>(L.<span class="built_in">begin</span>(), L.<span class="built_in">end</span>());</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">    <span class="keyword">if</span> (!i || <span class="built_in">dcmp</span>(L[i].k - L[i - <span class="number">1</span>].k)) L[m++] = L[i];</span><br><span class="line">  n = m;</span><br><span class="line">  <span class="function">vector&lt;Line&gt; <span class="title">Q</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">  <span class="type">int</span> h = <span class="number">1</span>, t = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    <span class="keyword">while</span> (h &lt; t &amp;&amp; <span class="built_in">side</span>(<span class="built_in">inter</span>(Q[t], Q[t - <span class="number">1</span>]), L[i].a, L[i].b) == <span class="number">1</span>) --t;</span><br><span class="line">    <span class="keyword">while</span> (h &lt; t &amp;&amp; <span class="built_in">side</span>(<span class="built_in">inter</span>(Q[h], Q[h + <span class="number">1</span>]), L[i].a, L[i].b) == <span class="number">1</span>) ++h;</span><br><span class="line">    <span class="keyword">if</span> (h &lt;= t &amp;&amp; !<span class="built_in">dcmp</span>(Q[t].k + L[i].k) &amp;&amp; <span class="built_in">side</span>(Q[t].a, L[i].a, L[i].b) &gt;= <span class="number">0</span>)</span><br><span class="line">      <span class="keyword">return</span> <span class="built_in">vPoint</span>();</span><br><span class="line">    Q[++t] = L[i];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">while</span> (h &lt; t &amp;&amp; <span class="built_in">side</span>(<span class="built_in">inter</span>(Q[t], Q[t - <span class="number">1</span>]), Q[h].a, Q[h].b) == <span class="number">1</span>) --t;</span><br><span class="line">  <span class="keyword">while</span> (h &lt; t &amp;&amp; <span class="built_in">side</span>(<span class="built_in">inter</span>(Q[h], Q[h + <span class="number">1</span>]), Q[t].a, Q[t].b) == <span class="number">1</span>) ++h;</span><br><span class="line">  vPoint A;</span><br><span class="line">  <span class="keyword">for</span> (<span class="type">int</span> i = h; i &lt;= t; ++i) &#123;</span><br><span class="line">    <span class="type">int</span> j = i &lt; t ? i + <span class="number">1</span> : h;</span><br><span class="line">    A.<span class="built_in">push_back</span>(<span class="built_in">inter</span>(Q[i], Q[j])); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> A;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="动态凸包">动态凸包</h2>
+<p>下凸壳 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">op = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">o</span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span>，上凸壳 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>o</mi><mi>p</mi><mo>=</mo><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">op = -1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">o</span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7278em;vertical-align:-0.0833em;"></span><span class="mord">−</span><span class="mord">1</span></span></span></span>。</p>
+<p>模板题 CF70D</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">ConvexHull</span> &#123;</span><br><span class="line">  <span class="type">int</span> op;</span><br><span class="line">  set&lt;Point&gt; s;</span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">in</span><span class="params">(Point p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> it = s.<span class="built_in">lower_bound</span>(<span class="built_in">Point</span>(p.x, -Infdb));</span><br><span class="line">    <span class="keyword">if</span> (it == s.<span class="built_in">end</span>()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">dcmp</span>(it-&gt;x - p.x)) <span class="keyword">return</span> op * <span class="built_in">dcmp</span>(p.y - it-&gt;y) &gt;= <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (it == s.<span class="built_in">begin</span>()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    Point b = *it, a = *--it;</span><br><span class="line">    <span class="keyword">return</span> op * ((b - a) ^ (p - a)) &gt;= <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="type">bool</span> <span class="title">judge</span><span class="params">(<span class="keyword">auto</span> it)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">next</span>(it) == s.<span class="built_in">end</span>() || it == s.<span class="built_in">begin</span>()) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    Point p = *it, a = *<span class="built_in">prev</span>(it), b = *<span class="built_in">next</span>(it);</span><br><span class="line">    <span class="keyword">return</span> op * <span class="built_in">dcmp</span>((b - a) ^ (p - a)) &gt;= <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">ins</span><span class="params">(Point p)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">in</span>(p)) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">auto</span> it = s.<span class="built_in">lower_bound</span>(<span class="built_in">Point</span>(p.x, -Infdb));</span><br><span class="line">    <span class="keyword">if</span> (it != s.<span class="built_in">end</span>() &amp;&amp; !<span class="built_in">dcmp</span>(it-&gt;x - p.x)) s.<span class="built_in">erase</span>(it);</span><br><span class="line">    s.<span class="built_in">insert</span>(p), it = s.<span class="built_in">find</span>(p);</span><br><span class="line">    <span class="keyword">auto</span> cur = <span class="built_in">next</span>(it);</span><br><span class="line">    <span class="keyword">while</span> (cur != s.<span class="built_in">end</span>() &amp;&amp; <span class="built_in">judge</span>(cur)) cur = s.<span class="built_in">erase</span>(cur);</span><br><span class="line">    <span class="keyword">if</span> (it != s.<span class="built_in">begin</span>()) &#123;</span><br><span class="line">      cur = <span class="built_in">prev</span>(it);</span><br><span class="line">      <span class="keyword">while</span> (<span class="built_in">judge</span>(cur)) s.<span class="built_in">erase</span>(cur--);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125; up, down;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+
+        
+
+
+        
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%82%B9%E5%92%8C%E5%90%91%E9%87%8F"><span class="nav-text">点和向量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%B4%E7%BA%BF%E7%9B%B8%E5%85%B3"><span class="nav-text">直线相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%9A%E8%BE%B9%E5%BD%A2%E7%9B%B8%E5%85%B3"><span class="nav-text">多边形相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%86%E7%9B%B8%E5%85%B3"><span class="nav-text">圆相关</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8A%E5%B9%B3%E9%9D%A2%E4%BA%A4"><span class="nav-text">半平面交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E5%87%B8%E5%8C%85"><span class="nav-text">动态凸包</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="zlxFTH"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">zlxFTH</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zlxFTH" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zlxFTH" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zlxFTH</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+      
+<link rel="stylesheet" href="/katex/katex.min.css">
+
+
+  
+
+</body>
+</html>
