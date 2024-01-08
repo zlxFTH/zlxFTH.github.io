@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>计算几何模板整理</title>
-    <url>/posts/geometry/</url>
+    <url>/posts/Geometry/</url>
     <content><![CDATA[<p>新一轮的模板整理采用分模块的方式，同时只保留重要内容，删去简短能够在赛场直接写出来并且不是每个题都要用的东西。</p>
 <span id="more"></span>
 <h2 id="点和向量">点和向量</h2>
@@ -22,6 +22,24 @@
 ]]></content>
       <categories>
         <category>Notes</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>24.01.08 闲话</title>
+    <url>/posts/24-01-08/</url>
+    <content><![CDATA[<p>上周短短续续发了一个星期的烧，感觉比去年这个时候的新冠和 APIO 那次发烧要久得多。真的是折磨死我了，星期二的时候突然得知要周三要考实验操作，本来已经烧到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>39</mn></mrow><annotation encoding="application/x-tex">39</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">39</span></span></span></span> 度了还要润去学校蹭别的班一节物理实验课，此外直到晚上都不知道生物和化学实验做哪些，课都没上过，最后的决定是干脆摆了。</p>
+<span id="more"></span>
+<p>第二天的结果也很搞笑，化学实验结论我乱写的方程式还对了一个，脸不红心不跳地交上去他也不扣我写错了的分，生物我漏一堆步骤还把盖玻片捏碎了然后满分，物理那个电路我在给他电压表连爆了的情况下瞎写的数据也不扣分。</p>
+<p>星期天还要考政治和物理的会考，后面几天又是在极度难受的情况下预习，预习的效果大概是关书还是不会，我都不知道高考选政治的同学是怎么想的，这种东西一天都坚持看不了。模拟题很难，但是我奶了一手全是送的就继续开摆了，事实证明是我是对的，尤其是这个物理。</p>
+<p>总而言之这周就是身体和精神上双重折磨，另外一层折磨就是我这周就写了一道题，SCOI 却近在咫尺了。</p>
+<p>我一直感觉我学 OI 好像效率很低，就是每过一个月我都会觉得自己这一个月好像是混过去了什么事都没干，深深地陷入自我怀疑。我很好奇 Au 选手一天到底能写多少道题，还是有什么其他衡量训练效果的方式能够让自己感到充实，你说我摸鱼吧我从早训到晚平均也就 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>∼</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2\sim 4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">∼</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> 个题，有些时候卡题了还 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn></mrow><annotation encoding="application/x-tex">0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span> 个题。而我并没有花大量的时间去写代码，相反我耗费的时间主要在想题上面，只能说我并不是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn><mi mathvariant="normal">%</mi></mrow><annotation encoding="application/x-tex">100\%</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8056em;vertical-align:-0.0556em;"></span><span class="mord">100%</span></span></span></span> 的时间的思考都有进展，不知不觉中就造成了时间的浪费，对此我也没有很好的解决办法。</p>
+<p>还有就是我现在没办法很好的评估自己的水平，我敢肯定我是在潜移默化地进步的，每次联考我都能打出不错的状态而且几乎不犯病，但是 OI 系列的比赛里并没有表现出来，CSP 肯定是我的锅，NOIP 我是真的感受到无力，一个多小时的时间里，我完全找不到 B 题哪里 WA 了，最后就是一个很小很小的没清空的锅，但是我找了好多遍，扫过相同的位置了好多遍，我没时间想 C 题，最后结果也很不满意。这段时间我也尝试了避免这种情况出现，比如减少无脑 cerr，不测大样例直接交，强迫自己能直接肉眼把错挑出来，我认为确实也有效果。</p>
+<p>其实最直观的矛盾感是从上周的百度之星引申出来的，虽然最后 T9 我网络流板子写错了爆了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>18</mn></mrow><annotation encoding="application/x-tex">18</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">18</span></span></span></span> 发，但是依旧最后 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>min</mi><mo>⁡</mo></mrow><annotation encoding="application/x-tex">2\min</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6679em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">min</span></span></span></span> 绝杀到了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>k</mi><mn>60</mn></mrow><annotation encoding="application/x-tex">rk60</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">60</span></span></span></span>，很难过的是，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>k</mi><mn>59</mn></mrow><annotation encoding="application/x-tex">rk59</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord">59</span></span></span></span> 是我左边的老哥，再往前数几个就看到 Au 爷了，同样过了 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>9</mn></mrow><annotation encoding="application/x-tex">9</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">9</span></span></span></span> 个题的选手，有的 Ag 了，有的甚至 Au，我去年因为省选犯病连省队的进不了，我今年省选是否能给我一个好的结果？</p>
+<p>剩下的一个月时间里节奏很快了，大概就是调整状态应对 thuwc 和 SCOI，训练方向主要还是减少犯病（写挂、debug 时间太长、想的太慢），训练材料多半是 CNOI 系列的题和别人博客里面给的 CF/AT 好题。</p>
+<p>农那边 AG 冠军了，距离上一个冠军时隔 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn></mrow><annotation encoding="application/x-tex">4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">4</span></span></span></span> 年，总感觉有些经历是相似的，希望今年我也能够有个好的结果。</p>
+]]></content>
+      <categories>
+        <category>Mess</category>
       </categories>
   </entry>
 </search>
