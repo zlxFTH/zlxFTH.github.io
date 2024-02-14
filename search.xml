@@ -101,6 +101,36 @@
       </categories>
   </entry>
   <entry>
+    <title>Tribulations</title>
+    <url>/posts/Shadow-of-PS2023/</url>
+    <content><![CDATA[<p>虽然说在省选前写游记据别人说有 debuff，在摆烂情绪高涨的时期我乱想了很多东西，和现在写的最有关系和对我影响最大的一个结论是，所谓的 buff/debuff 之类的屁用没有。所以，我想写游记就写，我只是想在不知道结果的情况下写下能够在以后回忆的东西罢了。</p>
+<span id="more"></span>
+<h2 id="2-1-2-10">2.1-2.10</h2>
+<p>这些天很摆，其实和 NOI 2023 那段时间是一样的，别人都有线下的比赛打，而自己只能在一个人的房间里面自闭。想想也算了，真的找不到其它能够调节精神状态的方式了。</p>
+<p>中间还是写了几个硬题，但是码速挺慢的，考前确实要把状态调整过来。</p>
+<p>期间有个什么联考，就写了个 T1，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">n^3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span></span></span></span></span></span></span></span> 跑 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2000</mn></mrow><annotation encoding="application/x-tex">2000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2000</span></span></span></span> 只 T 了两个点，还是几乎跑满的状态下。</p>
+<h2 id="2-12">2.12</h2>
+<p>机房线上 VP GDKOI 2024 Day1</p>
+<p>最自闭的一场比赛，本来想着拿这场调整 OI 比赛的状态。</p>
+<p>开场开 T1 就想歪了，大概一个小时多的时间就弃了，开 T2 发现 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>60</mn></mrow><annotation encoding="application/x-tex">60</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">60</span></span></span></span> 暴力性价比很高，然后正解猜是根号，但是不会，写满暴力加对拍加造极限数据大概又花了一个多小时，还是很太慢了，不过这一步现在不能忘，THUWC Day1 挂分还历历在目。</p>
+<p>然后 T3 神笔数论一点思路都没有。</p>
+<p>最后一个多小时扔掉了 T1 很不自然的网络流思路，重新捡起了一开始的找增广路的想法，又想了想好像会了，就是拆点之后找环，写写写然后还造了 checker 造了随机数据拍，没有拍出错，快下播的时候感觉没什么要做的了就去 QOJ 交了一发，结果全挂？？？时间不够，糊弄一下缝合了一个 AC 代码交了，然后一直在肉眼 debug，赛后发现这个 gen 文件全写进去了 <code>*4.in</code> 里面，也就是说我在虚空对拍，***，但还是拍不出错，后面意识到了拆点之后虽然不会走重复点但是会走到重复的拆点前的点，换做法改成 dfs 改过了，对有向图找环又有了深入理解。</p>
+<p>感觉很可怕啊，要是省选 T1 挂 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>100</mn></mrow><annotation encoding="application/x-tex">100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span> 我又没戏了。这个 T1 要规避错误首先需要在脑子清醒的状态下写一个 gen 和 checker，还需要让随机数据有点强度，还得写一个指数级暴力对着拍有无解，很多地方都没做好。还有就是整场比赛的前期节奏太慢，中期 T2 得分虽然稳健但是效率也非常低下。T3 最低限度的 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn></mrow><annotation encoding="application/x-tex">10</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">10</span></span></span></span> 分暴力也没拿。唉。</p>
+<p>双线程想题没办法做到，转而实现的是疯狂走路随机换题想。</p>
+<h2 id="2-13">2.13</h2>
+<p>重回线下训练了。写了个 SAM + 单调队列 和一个半平面交 shaber 题。</p>
+<p>还有若干简单图论。</p>
+<p>晚上开始复习线性代数。</p>
+<h2 id="2-14">2.14</h2>
+<p>重新复习了下 LGV，Matrix-Tree。</p>
+<p>下午写了一个 SAM + LCT 题，由于 LCT 很不熟练调了很久。</p>
+<p>甚至还尝试了用 FHQ-Treap 实现 LCT 发现常数又大还不如 Splay 好写。</p>
+]]></content>
+      <categories>
+        <category>Memories</category>
+      </categories>
+  </entry>
+  <entry>
     <title>一个 DP 优化题</title>
     <url>/posts/a-DP-OPT-Trick-1/</url>
     <content><![CDATA[<h2 id="One-Problem">One Problem</h2>
