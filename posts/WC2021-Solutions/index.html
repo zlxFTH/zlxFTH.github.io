@@ -28,7 +28,7 @@
 <meta property="og:description" content="这次 WC 我打铁了，16+50+016 + 50 + 016+50+0，Cu 线 707070，T3 写挂了 202020 分。SC 把这场当做省选了，所以是在线下考的，还记得是在某个神秘小区。 初二的比赛高二来看感觉三个题都有能力去驾驭，但就是每个题都还需要一些注意力啊。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-01-01T14:35:21.000Z">
-<meta property="article:modified_time" content="2024-03-14T15:14:24.000Z">
+<meta property="article:modified_time" content="2024-03-20T15:44:48.123Z">
 <meta property="article:author" content="zlxFTH">
 <meta name="twitter:card" content="summary">
 
@@ -219,7 +219,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-03-14 23:14:24" itemprop="dateModified" datetime="2024-03-14T23:14:24+08:00">2024-03-14</time>
+                <time title="修改时间：2024-03-20 23:44:48" itemprop="dateModified" datetime="2024-03-20T23:44:48+08:00">2024-03-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -258,7 +258,7 @@
 <p>任意一条路径一定是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>→</mo><mi>v</mi><mo>→</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">u\to v\to w</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02691em;">w</span></span></span></span> 这样的三元组推过来的，即 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi></mrow><annotation encoding="application/x-tex">v</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">v</span></span></span></span> 的两条颜色相等的 <code>)</code> 出边。</p>
 <p><strong>进而发现答案一定是若干个团</strong>！</p>
 <p>考虑用并查集维护上述过程，线段树合并维护每个颜色，用队列维护。</p>
-<p>注意要开两个并查集，第一个并查集描述当前<strong>把所有队列中的操作加入后的图</strong>，用于处理添加操作，第二个并茶几描述当前<strong>队列弹出已经执行后的图</strong>，用来进行线段树合并。线段树合并递归到叶子判断是否添加是用第一个并查集。</p>
+<p>注意要开两个并查集，第一个并查集描述当前<strong>把所有队列中的操作加入后的图</strong>，用于处理添加操作，第二个并查集描述当前<strong>队列弹出已经执行后的图</strong>，用来进行线段树合并。线段树合并递归到叶子判断是否添加是用第一个并查集。</p>
 <p>时间复杂度 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>n</mi><mi>log</mi><mo>⁡</mo><mi>n</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n\log n)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">n</span><span class="mclose">)</span></span></span></span>。</p>
 <h2 id="T2-表达式求值">T2 表达式求值</h2>
 <p>表达式树建出来，正常地去拆贡献就是设 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false">(</mo><mi>u</mi><mo separator="true">,</mo><mi>i</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">f(u, i)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">u</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">i</span><span class="mclose">)</span></span></span></span> 表示 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi></mrow><annotation encoding="application/x-tex">u</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">u</span></span></span></span> 节点最后是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span> 数组的值的方案数。</p>
@@ -291,10 +291,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/posts/Tricks/" rel="next" title="Tricks">
-      Tricks <i class="fa fa-chevron-right"></i>
+    <a href="/posts/Tricks/" rel="prev" title="Tricks">
+      <i class="fa fa-chevron-left"></i> Tricks
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/ARC133F/" rel="next" title="ARC133F Random Transition">
+      ARC133F Random Transition <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -371,7 +374,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
