@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Barrett</title>
+    <url>/posts/Barrett/</url>
+    <content><![CDATA[<p>Barrett 取模优化</p>
+<span id="more"></span>
+<p>通常在常数为输入的情况下使用，能够稳定处理模数在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext>int</mtext></mrow><annotation encoding="application/x-tex">\text{int}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6679em;"></span><span class="mord text"><span class="mord">int</span></span></span></span></span> 范围内的取模。</p>
+<p>Tips：模数为 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn></mrow><annotation encoding="application/x-tex">2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">2</span></span></span></span> 的幂时会出错，解决方案是在最后输出的时候做一次普通取模。</p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">Mod</span> &#123;</span><br><span class="line">  LL m, p;</span><br><span class="line">  <span class="function"><span class="type">void</span> <span class="title">init</span><span class="params">(<span class="type">int</span> pp)</span> </span>&#123;m = ((__int128)<span class="number">1</span> &lt;&lt; <span class="number">64</span>) / pp; p = pp;&#125;</span><br><span class="line">  <span class="function">LL <span class="title">operator</span><span class="params">()</span><span class="params">(LL x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> x - ((__int128(x) * m) &gt;&gt; <span class="number">64</span>) * p;</span><br><span class="line">  &#125;</span><br><span class="line">&#125; mod;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Notes</category>
+      </categories>
+  </entry>
+  <entry>
     <title>计算几何模板整理</title>
     <url>/posts/Geometry/</url>
     <content><![CDATA[<p>新一轮的模板整理采用分模块的方式，同时只保留重要内容，删去简短能够在赛场直接写出来并且不是每个题都要用的东西。</p>
