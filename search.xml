@@ -154,29 +154,6 @@
       </categories>
   </entry>
   <entry>
-    <title>NOI 前 Todo List</title>
-    <url>/posts/Todo-before-NOI/</url>
-    <content><![CDATA[<p>任务太多了，有必要的写代码，没必要的口胡。</p>
-<span id="more"></span>
-<ul>
-<li>（done）NOI 2022 Day1：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mn>1</mn><mo separator="true">,</mo><mi>T</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">T1, T2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">2</span></span></span></span></li>
-<li>NOI 2022 Day2：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mn>1</mn><mo separator="true">,</mo><mi>T</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">T1, T2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">2</span></span></span></span></li>
-<li>NOI 2021 Day1：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mn>1</mn><mo separator="true">,</mo><mi>T</mi><mn>2</mn><mo separator="true">,</mo><mi>T</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">T1, T2, T3</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">3</span></span></span></span></li>
-<li>NOI 2021 Day2：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mn>1</mn><mo separator="true">,</mo><mi>T</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">T1, T2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mord">2</span></span></span></span></li>
-<li>NOI 2020 Day1：</li>
-<li>（done）AGC043：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>−</mo><mi>D</mi></mrow><annotation encoding="application/x-tex">A-D</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">D</span></span></span></span></li>
-<li>（done）AGC044：<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>−</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">A-E</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span></span></span></span>​</li>
-<li>USACO OPEN 2024</li>
-</ul>
-]]></content>
-      <categories>
-        <category>Notes</category>
-      </categories>
-      <tags>
-        <tag>Todo</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决 Linux Typora 字体问题</title>
     <url>/posts/Typora-Fonts/</url>
     <content><![CDATA[<p>Ubuntu Typora 默认字体很难看，需要改一下配置文件，注意更新之后又会失效，需要重新添加。</p>
